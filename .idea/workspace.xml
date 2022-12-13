@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c9cb7a2-19de-448f-8a66-bedee228c493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/csv/Csv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/csv/CsvLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/ExportDatev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/time/TimeStampGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/zip/Zip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+    <list default="true" id="1c9cb7a2-19de-448f-8a66-bedee228c493" name="Changes" comment="Zweiter Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/csv/Csv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csv/Csv.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +81,17 @@
       <workItem from="1670843720328" duration="771000" />
       <workItem from="1670844515853" duration="1554000" />
       <workItem from="1670848826677" duration="6572000" />
-      <workItem from="1670870103299" duration="15583000" />
+      <workItem from="1670870103299" duration="15757000" />
+      <workItem from="1670957685344" duration="381000" />
     </task>
+    <task id="LOCAL-00001" summary="Zweiter Commit">
+      <created>1670941375333</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670941375333</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +107,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Zweiter Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zweiter Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

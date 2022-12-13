@@ -17,7 +17,7 @@ public class Csv {
     };*/
 
     String[] info;
-    String[] header;
+    String[] headertest;
 
     private CsvLine processCsvLine(String data) {
         System.out.println("-------------------------- Neue Zeile:");
@@ -51,6 +51,21 @@ public class Csv {
         return csvLine;
     }
 
+    private String[] processCsvLineAsString(String current) {
+        StringTokenizer st = new StringTokenizer(current, ";");
+        List<String> tokens = new ArrayList<>();
+
+        while (st.hasMoreTokens()) {
+            tokens.add(st.nextToken());
+        }
+        String[] array = new String[tokens.size()];
+        for (int j = 0; j < tokens.size(); j++) {
+            array[j] = tokens.get(j);
+        }
+
+        return array;
+    }
+
     /**
      * Lese CSV Datei und verarbeite zeilenweise.
      */
@@ -64,28 +79,11 @@ public class Csv {
                 csvLines.add(processCsvLine(current));
                 current = reader.readLine();
             } else if (i == 0) {
-                StringTokenizer st = new StringTokenizer(current, ";");
-                List<String> tokens = new ArrayList<>();
-                while (st.hasMoreTokens()) {
-                    tokens.add(st.nextToken());
-                }
-                info = new String[tokens.size()];
-                for (int j = 0; j < tokens.size(); j++) {
-                    info[j]=tokens.get(j);
-                }
+                info = processCsvLineAsString(current);
                 current = reader.readLine();
                 i += 1;
-            }
-            else if (i == 1) {
-                StringTokenizer st = new StringTokenizer(current, ";");
-                List<String> tokens = new ArrayList<>();
-                while (st.hasMoreTokens()) {
-                    tokens.add(st.nextToken());
-                }
-                header=new String[tokens.size()];
-                for (int j = 0; j < tokens.size(); j++) {
-                    header[j]=tokens.get(j);
-                }
+            } else if (i == 1) {
+                headertest = processCsvLineAsString(current);
                 current = reader.readLine();
                 i += 1;
             }
@@ -118,7 +116,7 @@ public class Csv {
             CSVWriter writer = new CSVWriter(outputfile, ';', CSVWriter.NO_QUOTE_CHARACTER, CSVWriter.NO_ESCAPE_CHARACTER, CSVWriter.DEFAULT_LINE_END);
             //writer.writeNext(header);
             writer.writeNext(info);
-            writer.writeNext(header);
+            writer.writeNext(headertest);
             for (int i = 0; i < list.size(); i++) {
                 writer.writeNext(list.get(i));
             }
