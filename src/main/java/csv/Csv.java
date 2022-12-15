@@ -23,11 +23,15 @@ public class Csv {
         System.out.println("-------------------------- Neue Zeile:");
         data += "\n";
         final StringTokenizer st = new StringTokenizer(data, ";");
+        boolean containsForderungsverluste = false;
 
         List<String> tokens = new ArrayList<>();
         while (st.hasMoreTokens()) {
+
             tokens.add(st.nextToken());
+
         }
+
 
         CsvLine csvLine = new CsvLine();
         csvLine.setUmsatz(tokens.get(0));
@@ -54,13 +58,15 @@ public class Csv {
     private String[] processCsvLineAsString(String current) {
         StringTokenizer st = new StringTokenizer(current, ";");
         List<String> tokens = new ArrayList<>();
-
         while (st.hasMoreTokens()) {
             tokens.add(st.nextToken());
+
         }
         String[] array = new String[tokens.size()];
         for (int j = 0; j < tokens.size(); j++) {
             array[j] = tokens.get(j);
+
+
         }
 
         return array;
@@ -100,6 +106,9 @@ public class Csv {
                 list.get(i).setGegenkonto("8400");
                 String newString = list.get(i).getBelefinfoInhalt3().replace("\"", "");
                 list.get(i).setBelegfeld1(list.get(i).getBelegfeld1() + " " + newString);
+            }
+            if (list.get(i).getKonto().equals("1203")) {
+                list.set(i, null);
             } else {
                 list.get(i).setGegenkonto("1590");
                 String newString = list.get(i).getBelefinfoInhalt3().replace("\"", "");
@@ -130,23 +139,26 @@ public class Csv {
     public List<String[]> toList(List<CsvLine> list) {
         List<String[]> stringList = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
-            String[] array = new String[]{
-                    list.get(i).getUmsatz(),
-                    list.get(i).getSollHabenKennzeichen(),
-                    list.get(i).getWkzUmsatz(),
-                    list.get(i).getKurs(),
-                    list.get(i).getBasisumsatz(),
-                    list.get(i).getWkzBasisumsatz(),
-                    list.get(i).getKonto(),
-                    list.get(i).getGegenkonto(),
-                    list.get(i).getBuSchlüssel(),
-                    list.get(i).getBelegDatum(),
-                    list.get(i).getBelegfeld1(),
-                    list.get(i).getBelegfeld2(),
-                    list.get(i).getSkonto(),
-                    list.get(i).getBuchungstext(),
-            };
-            stringList.add(array);
+            if (list.get(i) != null) {
+                String[] array = new String[]{
+                        list.get(i).getUmsatz(),
+                        list.get(i).getSollHabenKennzeichen(),
+                        list.get(i).getWkzUmsatz(),
+                        list.get(i).getKurs(),
+                        list.get(i).getBasisumsatz(),
+                        list.get(i).getWkzBasisumsatz(),
+                        list.get(i).getKonto(),
+                        list.get(i).getGegenkonto(),
+                        list.get(i).getBuSchlüssel(),
+                        list.get(i).getBelegDatum(),
+                        list.get(i).getBelegfeld1(),
+                        list.get(i).getBelegfeld2(),
+                        list.get(i).getSkonto(),
+                        list.get(i).getBuchungstext(),
+                };
+                stringList.add(array);
+            }
+
         }
         return stringList;
     }

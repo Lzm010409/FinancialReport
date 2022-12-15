@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c9cb7a2-19de-448f-8a66-bedee228c493" name="Changes" comment="Zweiter Commit">
+    <list default="true" id="1c9cb7a2-19de-448f-8a66-bedee228c493" name="Changes" comment="processCsvLineAsString eingeführt. Dadurch konnte die Erstellung der Infos und Headers des Export ausgelagert werden.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/ExportVoucher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/SevQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csv/Csv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csv/Csv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restfulapi/requests/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restfulapi/requests/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restfulapi/requests/builder/JsonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restfulapi/requests/builder/JsonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restfulapi/requests/url/URL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restfulapi/requests/url/URL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +53,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="CSV_Parser" />
@@ -60,9 +67,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Request" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="restfulapi.requests.Request" />
+      <module name="CSV_Parser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restfulapi.requests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Request" />
       </list>
     </recent_temporary>
   </component>
@@ -82,7 +103,9 @@
       <workItem from="1670844515853" duration="1554000" />
       <workItem from="1670848826677" duration="6572000" />
       <workItem from="1670870103299" duration="15757000" />
-      <workItem from="1670957685344" duration="381000" />
+      <workItem from="1670957685344" duration="647000" />
+      <workItem from="1671032118347" duration="1310000" />
+      <workItem from="1671109159286" duration="1475000" />
     </task>
     <task id="LOCAL-00001" summary="Zweiter Commit">
       <created>1670941375333</created>
@@ -91,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670941375333</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="processCsvLineAsString eingeführt. Dadurch konnte die Erstellung der Infos und Headers des Export ausgelagert werden.">
+      <created>1670958328292</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670958328292</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +140,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Zweiter Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zweiter Commit" />
+    <MESSAGE value="processCsvLineAsString eingeführt. Dadurch konnte die Erstellung der Infos und Headers des Export ausgelagert werden." />
+    <option name="LAST_COMMIT_MESSAGE" value="processCsvLineAsString eingeführt. Dadurch konnte die Erstellung der Infos und Headers des Export ausgelagert werden." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -120,11 +151,17 @@
           <line>46</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/restfulapi/requests/Request.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.apache.hc.client5.http.impl.classic.CloseableHttpResponse" memberName="response" />
+        <PinnedItemInfo parentTag="entity.ExportVoucher" memberName="download" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

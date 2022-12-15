@@ -1,5 +1,8 @@
 package restfulapi.requests;
 
+import entity.ExportVoucher;
+import entity.Filter;
+import entity.SevQuery;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.entity.mime.MultipartEntityBuilder;
@@ -9,9 +12,11 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.ContentType;
 import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.io.entity.StringEntity;
+import restfulapi.requests.builder.JsonBuilder;
 import restfulapi.requests.url.Token;
 import restfulapi.requests.url.URL;
 import restfulapi.requests.url.UrlBuilder;
+import time.TimeStampGenerator;
 
 import java.io.*;
 import java.util.Base64;
@@ -107,7 +112,18 @@ public class Request {
     public static void main(String[] args) {
         Request request = new Request();
         Token token = new Token();
-        token.setToken("b135d867554ab439a014eafb84078349");
-        request.httpPost(new File("/Users/lukegollenstede/Desktop/02/Gutachten/12/1222_705TG/Abtrittserklärung_ausgefüllt.pdf"), new UrlBuilder().buildUrl(URL.UPLOADVOUCHERFILE), "b135d867554ab439a014eafb84078349");
+        token.setToken("");
+        SevQuery sevQuery = new SevQuery(
+                "Voucher"
+        );
+        Filter filter = new Filter();
+        TimeStampGenerator timeStampGenerator = new TimeStampGenerator();
+        filter.setStartPayDate(String.valueOf(timeStampGenerator.generateTimestamp(2022, 11, 20)));
+        filter.setEndPayDate(String.valueOf(timeStampGenerator.generateTimestamp(2022, 11, 30)));
+        sevQuery.setFilter(filter);
+        ExportVoucher exportVoucher = new ExportVoucher(sevQuery);
+        exportVoucher.setDownload(true);
+        String output = new JsonBuilder().build(exportVoucher);
+        request.httpGet(new JsonBuilder().build(exportVoucher),new UrlBuilder().buildUrl(URL.GETVOUCHERZIP),token.getToken());
     }
 }

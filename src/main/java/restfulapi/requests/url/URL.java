@@ -11,7 +11,8 @@ public enum URL {
 
     CREATENEWCONTACTADRESS("/ContactAddress"),
     CREATETAG("/Tag/Factory/create"),
-    GETDATEVEXPORT("/Export/datevCSV");
+    GETDATEVEXPORT("/Export/datevCSV"),
+    GETVOUCHERZIP("/Export/voucherZip");
 
     String extender;
 
