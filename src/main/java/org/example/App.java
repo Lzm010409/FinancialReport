@@ -23,7 +23,7 @@ public class App {
     public static void main(String[] args) throws IOException {
         TimeStampGenerator timeStampGenerator = new TimeStampGenerator();
 
-        ExportDatev exportDatev = new ExportDatev(timeStampGenerator.generateTimestamp(2022, 12, 1), timeStampGenerator.generateTimestamp(2022, 12, 12), "T");
+        ExportDatev exportDatev = new ExportDatev(timeStampGenerator.generateTimestamp(2022, 12, 1), timeStampGenerator.generateTimestamp(2022, 12, 18), "T");
         System.out.println(new JsonBuilder().build(exportDatev));
         Token token = new Token();
         token.setToken("");

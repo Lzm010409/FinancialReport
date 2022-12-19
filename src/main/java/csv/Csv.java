@@ -109,7 +109,7 @@ public class Csv {
             }
             if (list.get(i).getKonto().equals("1203")) {
                 list.set(i, null);
-            } else {
+            } else if (list.get(i).getSollHabenKennzeichen().contains("H")) {
                 list.get(i).setGegenkonto("1590");
                 String newString = list.get(i).getBelefinfoInhalt3().replace("\"", "");
                 list.get(i).setBelegfeld1(list.get(i).getBelegfeld1() + " " + newString);

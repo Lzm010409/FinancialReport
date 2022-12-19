@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c9cb7a2-19de-448f-8a66-bedee228c493" name="Changes" comment="processCsvLineAsString eingeführt. Dadurch konnte die Erstellung der Infos und Headers des Export ausgelagert werden.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/ExportVoucher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/SevQuery.java" afterDir="false" />
+    <list default="true" id="1c9cb7a2-19de-448f-8a66-bedee228c493" name="Changes" comment="Kleine Anpassung bei adjustCSV, damit ausgebuchte Rechnungen, nicht im Export erscheinen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csv/Csv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csv/Csv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restfulapi/requests/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restfulapi/requests/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restfulapi/requests/builder/JsonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restfulapi/requests/builder/JsonBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restfulapi/requests/url/URL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restfulapi/requests/url/URL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +98,8 @@
       <workItem from="1670870103299" duration="15757000" />
       <workItem from="1670957685344" duration="647000" />
       <workItem from="1671032118347" duration="1310000" />
-      <workItem from="1671109159286" duration="1475000" />
+      <workItem from="1671109159286" duration="1778000" />
+      <workItem from="1671441093703" duration="423000" />
     </task>
     <task id="LOCAL-00001" summary="Zweiter Commit">
       <created>1670941375333</created>
@@ -121,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670958328292</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Kleine Anpassung bei adjustCSV, damit ausgebuchte Rechnungen, nicht im Export erscheinen">
+      <created>1671110877978</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671110877978</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +142,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Zweiter Commit" />
     <MESSAGE value="processCsvLineAsString eingeführt. Dadurch konnte die Erstellung der Infos und Headers des Export ausgelagert werden." />
-    <option name="LAST_COMMIT_MESSAGE" value="processCsvLineAsString eingeführt. Dadurch konnte die Erstellung der Infos und Headers des Export ausgelagert werden." />
+    <MESSAGE value="Kleine Anpassung bei adjustCSV, damit ausgebuchte Rechnungen, nicht im Export erscheinen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kleine Anpassung bei adjustCSV, damit ausgebuchte Rechnungen, nicht im Export erscheinen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
